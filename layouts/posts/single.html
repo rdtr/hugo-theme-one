@@ -5,6 +5,7 @@
   <aside>{{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a></a>&nbsp;&nbsp;&nbsp;{{end}}</aside>
   <p>{{ .Content }}</p>
   {{ partial "share.html" . }}
+  {{ partial "disqus.html" . }}
 </div>
 
 {{ if (eq .Type "posts") }}
